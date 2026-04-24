@@ -1,0 +1,55 @@
+/* contact.css */
+.contact-layout {
+  padding-top: 64px;
+  min-height: 100vh;
+  padding: 80px 2rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.contact-header { margin-bottom: 3rem }
+.contact-header h1 {
+  font-family: var(--font-head);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2.5rem;
+}
+.contact-info { display: flex; flex-direction: column; gap: 1.25rem }
+.contact-info-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.5rem;
+}
+.contact-info-item {
+  display: flex; align-items: flex-start;
+  gap: 1rem; margin-bottom: 1.25rem;
+}
+.contact-info-item:last-child { margin-bottom: 0 }
+.contact-info-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: rgba(108,99,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent2); font-size: 1rem; flex-shrink: 0;
+}
+.contact-info-text h4 {
+  font-size: 0.775rem; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--text3); margin-bottom: 0.25rem;
+}
+.contact-info-text p { font-size: 0.9rem; color: var(--text2) }
+.contact-form-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 2rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media(max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr }
+  .form-row     { grid-template-columns: 1fr }
+}
