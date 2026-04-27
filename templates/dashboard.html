@@ -1,3 +1,4 @@
+<!-- vscode ignore -->
 {% extends "base.html" %}
 {% block title %}Dashboard{% endblock %}
 {% block head %}
@@ -127,7 +128,7 @@
                 <td><span class="chip chip-{{ 'green' if f.status=='done' else 'amber' }}">{{ f.status }}</span></td>
                 <td>
                   <a class="icon-btn" href="{{ url_for('visualize.index') }}" title="Visualize"><i class="fas fa-chart-bar"></i></a>
-                  <button class="icon-btn" onclick="deleteFile({{ f.id }})" title="Delete"><i class="fas fa-trash"></i></button>
+                  <<button class="icon-btn" onclick="deleteFile('{{ f.id }}')" title="Delete"><i class="fas fa-trash"></i></button>
                 </td>
               </tr>
               {% endfor %}
@@ -165,7 +166,7 @@
 
     <!-- ── Activity tab ── -->
     <div class="dash-tab" id="tab-activity">
-      <div class="dash-header"><h1>Activity Log</h1><p>Your full action history on InVision.</p></div>
+      <div class="dash-header"><h1>Activity Log</h1><p>Your full action history on snapdfy.</p></div>
       <div class="dash-card">
         {% if activities %}
         <div class="activity-list">

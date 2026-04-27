@@ -1,4 +1,4 @@
-# InVision — Data Intelligence Platform
+# snapdfy — Data Intelligence Platform
 
 A fully separated, production-grade **Flask + Vanilla JS** data visualization platform.
 
@@ -7,7 +7,7 @@ A fully separated, production-grade **Flask + Vanilla JS** data visualization pl
 ## Project Structure
 
 ```
-invision/
+snapdfy/
 │
 ├── app.py                  ← Flask entry point (create_app factory)
 ├── config.py               ← All configuration (DB, mail, uploads, etc.)
@@ -69,7 +69,7 @@ invision/
 
 ```bash
 git clone <your-repo>
-cd invision
+cd snapdfy
 python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 ```
@@ -86,7 +86,7 @@ Create a `.env` file or export variables:
 
 ```bash
 SECRET_KEY=your-secret-key-here
-DATABASE_URL=sqlite:///invision.db     # or postgresql://...
+DATABASE_URL=sqlite:///snapdfy.db     # or postgresql://...
 MAIL_USERNAME=your@gmail.com
 MAIL_PASSWORD=your-app-password
 DEBUG=True

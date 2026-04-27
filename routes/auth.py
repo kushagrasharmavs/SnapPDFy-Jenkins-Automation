@@ -70,7 +70,7 @@ def signup():
             db.session.commit()
             _log(user.id, "Created account")
             login_user(user)
-            flash("Account created! Welcome to InVision 🎉", "success")
+            flash("Account created! Welcome to snapdfy 🎉", "success")
             return redirect(url_for("dashboard.index"))
 
     return render_template("signup.html", error=error)

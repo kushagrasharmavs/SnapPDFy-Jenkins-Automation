@@ -45,7 +45,8 @@ def send():
     # Send email notification (non-fatal if mail not configured)
     try:
         msg = Message(
-            subject=f"[InVision Contact] {subject}",
+    "SnapDFY",
+            subject=f"[ Contact] {subject}",
             recipients=[current_app.config["CONTACT_EMAIL"]],
             body=f"From: {name} <{email}>\n\n{message}",
         )

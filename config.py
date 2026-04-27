@@ -1,5 +1,5 @@
 """
-InVision Configuration
+snapdfy Configuration
 """
 
 import os
@@ -16,7 +16,7 @@ class Config:
     # ── Database ──────────────────────────────────────────────────────────────
     SQLALCHEMY_DATABASE_URI = os.environ.get(
         "DATABASE_URL",
-        f"sqlite:///{os.path.join(BASE_DIR, 'invision.db')}"
+        f"sqlite:///{os.path.join(BASE_DIR, 'snapdfy.db')}"
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -37,11 +37,11 @@ class Config:
     MAIL_USE_TLS  = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME", "your@gmail.com")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD", "your-app-password")
-    MAIL_DEFAULT_SENDER = ("InVision", os.environ.get("MAIL_USERNAME", "your@gmail.com"))
+    MAIL_DEFAULT_SENDER = ("snapdfy", os.environ.get("MAIL_USERNAME", "your@gmail.com"))
 
     # ── Contact info (rendered in templates) ──────────────────────────────────
     CONTACT_PHONE = "+91 98765 43210"
-    CONTACT_EMAIL = "contact@invision.app"
+    CONTACT_EMAIL = "contact@snapdfy.app"
 
 
 class ProductionConfig(Config):

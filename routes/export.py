@@ -71,7 +71,7 @@ def export_csv():
         io.BytesIO(buf.getvalue().encode()),
         mimetype="text/csv",
         as_attachment=True,
-        download_name="invision_export.csv",
+        download_name="snapdfy_export.csv",
     )
 
 
@@ -87,7 +87,7 @@ def export_excel():
 
     buf = io.BytesIO()
     with pd.ExcelWriter(buf, engine="openpyxl") as writer:
-        df.to_excel(writer, index=False, sheet_name="InVision Export")
+        df.to_excel(writer, index=False, sheet_name="snapdfy Export")
     buf.seek(0)
     db.session.add(ActivityLog(user_id=current_user.id, action="Exported data as Excel"))
     db.session.commit()
@@ -95,7 +95,7 @@ def export_excel():
         buf,
         mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         as_attachment=True,
-        download_name="invision_export.xlsx",
+        download_name="snapdfy_export.xlsx",
     )
 
 
@@ -117,7 +117,7 @@ def export_json():
         io.BytesIO(payload.encode()),
         mimetype="application/json",
         as_attachment=True,
-        download_name="invision_export.json",
+        download_name="snapdfy_export.json",
     )
 
 
@@ -146,7 +146,7 @@ def export_pdf():
         styles = getSampleStyleSheet()
         elems  = []
 
-        elems.append(Paragraph("InVision — Data Export Report", styles["Title"]))
+        elems.append(Paragraph("snapdfy — Data Export Report", styles["Title"]))
         elems.append(Spacer(1, 12))
         elems.append(Paragraph(f"Rows: {len(df)} | Columns: {len(df.columns)}", styles["Normal"]))
         elems.append(Spacer(1, 12))
@@ -167,7 +167,7 @@ def export_pdf():
 
         db.session.add(ActivityLog(user_id=current_user.id, action="Generated PDF report"))
         db.session.commit()
-        return send_file(buf, mimetype="application/pdf", as_attachment=True, download_name="invision_report.pdf")
+        return send_file(buf, mimetype="application/pdf", as_attachment=True, download_name="snapdfy_report.pdf")
 
     except ImportError:
         return jsonify({"error": "PDF export requires reportlab. Run: pip install reportlab"}), 501

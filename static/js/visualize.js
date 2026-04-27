@@ -1,5 +1,5 @@
 /* ==========================================================
-   InVision — visualize.js
+   snapdfy — visualize.js
    CSV/Excel upload → Flask API → Chart.js rendering
    ========================================================== */
 
@@ -237,7 +237,7 @@ function renderChart() {
 function downloadChart() {
   if (!mainChart) return;
   const a = document.createElement("a");
-  a.download = "invision_chart.png";
+  a.download = "snapdfy_chart.png";
   a.href = document.getElementById("mainChart").toDataURL("image/png");
   a.click();
   showToast("Chart downloaded!", "success");

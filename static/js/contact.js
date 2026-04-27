@@ -1,5 +1,5 @@
 /* ==========================================================
-   InVision — contact.js
+   snapdfy — contact.js
    Client-side validation + AJAX submission to /contact/send
    ========================================================== */
 

@@ -1,5 +1,5 @@
 """
-InVision - Data Intelligence Platform
+snapdfy - Data Intelligence Platform
 Flask Backend Entry Point
 """
 

@@ -1,5 +1,5 @@
 /* ==========================================================
-   InVision — dashboard.js
+   snapdfy — dashboard.js
    Tab switching, activity chart (fetches /dashboard/api/activity-chart),
    sidebar toggle on mobile, delete file helper
    ========================================================== */

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}InVision{% endblock %} — Data Intelligence Platform</title>
+  <title>{% block title %}SnaPDFy{% endblock %} — SnaPDFy-Visualization </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -44,7 +44,7 @@
 
   <!-- Top nav -->
   <nav class="topnav">
-    <a class="nav-logo" href="{{ url_for('home.index') }}">InVision</a>
+    <a class="nav-logo" href="{{ url_for('home.index') }}">SnaPDFy</a>
     <div class="nav-links">
       <a class="nav-link {% if request.endpoint == 'home.index' %}active{% endif %}" href="{{ url_for('home.index') }}">Home</a>
       {% if current_user.is_authenticated %}

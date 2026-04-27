@@ -1,5 +1,5 @@
 /* ==========================================================
-   InVision — report.js
+   snapdfy — report.js
    Document analysis: uploads to Flask /report/analyze,
    animates results into the UI
    ========================================================== */

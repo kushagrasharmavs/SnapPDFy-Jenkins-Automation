@@ -1,5 +1,5 @@
 /* ==========================================================
-   InVision — auth.js
+   snapdfy — auth.js
    Client-side validation for login & signup forms
    ========================================================== */
 

@@ -1,5 +1,5 @@
 /* ==========================================================
-   InVision — base.js
+   snapdfy — base.js
    Shared utilities: theme, toast, loader, nav, drag-upload
    ========================================================== */
 
